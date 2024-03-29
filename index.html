@@ -50,6 +50,7 @@
 
         const art = new Artplayer({
             container: '#app',
+            poster: 'https://artplayer.org/assets/sample/poster.jpg',
             setting: true,
             loop: true,
             flip: true,
@@ -63,6 +64,16 @@
             customType: {
                 m3u8: playM3u8,
             },
+            layers: [
+                {
+                    html: '<img width="30" src="https://artplayer.org/assets/img/logo.png">',
+                    style: {
+                        position: 'absolute',
+                        top: '20px',
+                        left: '20px',
+                    },
+                },
+            ],
         });
 
         const url = getUrlParam('url');
